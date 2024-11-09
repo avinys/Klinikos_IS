@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Procedūros Sukūrimo Langas</title>
+</head>
+<body>
+<h1>Procedūros Sukūrimo Langas</h1>
+<form action="#" method="post">
+    <label for="procedureName">Procedūros Pavadinimas:</label>
+    <input type="text" id="procedureName" name="procedureName"><br><br>
+
+    <label for="procedureDescription">Aprašymas:</label>
+    <textarea id="procedureDescription" name="procedureDescription"></textarea><br><br>
+
+    <button type="submit">Pridėti Procedūrą</button>
+</form>
+
+<br>
+<a th:href="@{/view-procedures}">Grįžti į Procedūrų Peržiūros Langą</a>
+</body>
+</html>

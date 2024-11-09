@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Gydytojo Sukūrimo Langas</title>
+</head>
+<body>
+<h1>Gydytojo Sukūrimo Langas</h1>
+<form action="#" method="post">
+    <label for="doctorName">Vardas:</label>
+    <input type="text" id="doctorName" name="doctorName"><br><br>
+
+    <label for="doctorSpecialty">Specializacija:</label>
+    <input type="text" id="doctorSpecialty" name="doctorSpecialty"><br><br>
+
+    <button type="submit">Sukurti Gydytoją</button>
+</form>
+
+<br>
+<a th:href="@{/admin-home}">Atgal į pagrindinį langą</a>
+</body>
+</html>

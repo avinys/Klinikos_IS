@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Procedūrų Peržiūros Langas</title>
+</head>
+<body>
+<h1>Procedūrų Peržiūros Langas</h1>
+<a th:href="@{/create-procedure}">Pridėti Naują Procedūrą</a>
+<ul>
+    <li><b>Proceduros Duomenys</b></li>
+    <li><a th:href="@{/edit-procedure}">Redaguoti Procedūrą</a></li>
+    <li><a th:href="@{/confirm-delete-procedure}">Ištrinti Procedūrą</a></li>
+</ul>
+
+<br>
+<a th:href="@{/admin-home}">Grįžti į pagrindinį langą</a>
+</body>
+</html>

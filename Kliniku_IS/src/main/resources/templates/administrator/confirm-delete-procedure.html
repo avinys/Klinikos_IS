@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Ištrinimo Patvirtinimo Langas</title>
+</head>
+<body>
+<h1>Ištrinimo Patvirtinimo Langas</h1>
+<p>Ar tikrai norite ištrinti šią procedūrą?</p>
+<form action="#" method="post">
+    <input type="hidden" name="procedureId" value="12345">
+    <button type="submit">Patvirtinti Ištrinimą</button>
+    <a th:href="@{/view-procedures}">Atšaukti</a>
+</form>
+</body>
+</html>
