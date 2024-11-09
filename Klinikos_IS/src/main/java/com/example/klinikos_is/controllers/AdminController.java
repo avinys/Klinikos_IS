@@ -1,4 +1,4 @@
-package com.example.kliniku_is;
+package com.example.klinikos_is;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

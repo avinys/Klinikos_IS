@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>Kliniku_IS</artifactId>
+	<artifactId>Klinikos_IS</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Kliniku_IS</name>
+	<name>Klinikos_IS</name>
 	<description>Clinic information system</description>
 	<url/>
 	<licenses>
