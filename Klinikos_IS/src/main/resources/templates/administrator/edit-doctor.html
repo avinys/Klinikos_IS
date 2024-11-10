@@ -2,20 +2,111 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Redaguoti Gydytoją</title>
-    <link ref="stylesheet" th:href="@{/styles/global.css}">
+    <link rel="stylesheet" th:href="@{/styles/global.css}">
 </head>
 <body>
 <h1>Redaguoti Gydytoją</h1>
-<form action="view-users" method="GET">
-    <label for="doctorName">Vardas:</label>
-    <input type="text" id="doctorName" name="doctorName" value="Petras"><br><br>
 
-    <label for="doctorSpecialty">Specializacija:</label>
-    <input type="text" id="doctorSpecialty" name="doctorSpecialty" value="Kardiologas"><br><br>
+<form action="view-users" method="GET">
+    <!-- Naudotojas fields -->
+    <h2>Naudotojas Informacija</h2>
+    <label for="username">Prisijungimo vardas:</label>
+    <input type="text" id="username" name="username" value="petras456"><br><br>
+
+    <label for="password">Slaptažodis:</label>
+    <input type="password" id="password" name="password" value="******"><br><br>
+
+    <label for="email">Elektroninis paštas:</label>
+    <input type="email" id="email" name="email" value="petras@pavyzdys.lt"><br><br>
+
+    <label for="phone">Telefono numeris:</label>
+    <input type="tel" id="phone" name="phone" value="+37069876543"><br><br>
+
+    <label for="creationDate">Sukūrimo data:</label>
+    <input type="date" id="creationDate" name="creationDate" value="2023-02-15"><br><br>
+
+    <!-- Gydytojas fields -->
+    <h2>Gydytojas Informacija</h2>
+    <label for="firstName">Vardas:</label>
+    <input type="text" id="firstName" name="firstName" value="Petras"><br><br>
+
+    <label for="lastName">Pavardė:</label>
+    <input type="text" id="lastName" name="lastName" value="Petraitis"><br><br>
+
+    <label for="idCode">Asmens kodas:</label>
+    <input type="text" id="idCode" name="idCode" value="1234567890"><br><br>
+
+    <label for="gender">Lytis:</label>
+    <select id="gender" name="gender">
+        <option value="male" selected>Vyras</option>
+        <option value="female">Moteris</option>
+    </select><br><br>
+
+    <label for="birthDate">Gimimo data:</label>
+    <input type="date" id="birthDate" name="birthDate" value="1980-01-01"><br><br>
+
+    <label for="address">Adresas:</label>
+    <input type="text" id="address" name="address" value="Vilniaus g. 1, Vilnius"><br><br>
+
+    <label for="office">Kabinetas:</label>
+    <input type="text" id="office" name="office" value="205"><br><br>
+
+    <!-- Kvalifikacija fields -->
+    <h2>Kvalifikacija</h2>
+    <div id="qualificationContainer">
+        <div class="qualification">
+            <label for="qualificationName1">Pavadinimas:</label>
+            <input type="text" id="qualificationName1" name="qualificationName[]"><br><br>
+
+            <label for="qualificationPlace1">Įgijimo vieta:</label>
+            <input type="text" id="qualificationPlace1" name="qualificationPlace[]"><br><br>
+
+            <label for="qualificationDate1">Įgijimo data:</label>
+            <input type="date" id="qualificationDate1" name="qualificationDate[]"><br><br>
+
+            <label for="studyLevel1">Studijų pakopa:</label>
+            <input type="text" id="studyLevel1" name="studyLevel[]"><br><br>
+
+            <label for="workExperience1">Darbo patirtis (metai):</label>
+            <input type="number" id="workExperience1" name="workExperience[]" min="0"><br><br>
+        </div>
+    </div>
+
+    <button type="button" onclick="addQualification()">Pridėti Kvalifikaciją</button><br><br>
 
     <button type="submit">Atnaujinti Gydytoją</button>
 </form>
+
 <br>
 <a href="view-users">Atgal į Vartotojų Peržiūrą</a>
+
+<script>
+    let qualificationCount = 1;
+
+    function addQualification() {
+        qualificationCount++;
+        const container = document.getElementById("qualificationContainer");
+        const newQualification = document.createElement("div");
+        newQualification.classList.add("qualification");
+        newQualification.innerHTML = `
+            <label for="qualificationName${qualificationCount}">Pavadinimas:</label>
+            <input type="text" id="qualificationName${qualificationCount}" name="qualificationName[]"><br><br>
+
+            <label for="qualificationPlace${qualificationCount}">Įgijimo vieta:</label>
+            <input type="text" id="qualificationPlace${qualificationCount}" name="qualificationPlace[]"><br><br>
+
+            <label for="qualificationDate${qualificationCount}">Įgijimo data:</label>
+            <input type="date" id="qualificationDate${qualificationCount}" name="qualificationDate[]"><br><br>
+
+            <label for="studyLevel${qualificationCount}">Studijų pakopa:</label>
+            <input type="text" id="studyLevel${qualificationCount}" name="studyLevel[]"><br><br>
+
+            <label for="workExperience${qualificationCount}">Darbo patirtis (metai):</label>
+            <input type="number" id="workExperience${qualificationCount}" name="workExperience[]" min="0"><br><br>
+        `;
+        container.appendChild(newQualification);
+    }
+</script>
+
 </body>
 </html>

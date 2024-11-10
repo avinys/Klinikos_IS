@@ -3,16 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Redaguoti Procedūrų Ataskaitą</title>
-    <link ref="stylesheet" th:href="@{/styles/global.css}">
+    <link rel="stylesheet" th:href="@{/styles/global.css}">
 </head>
 <body>
-<h1>Redaguoti Procedūrų Ataskaitą</h1>
-<form action="doctor-view-procedure-reports" method="GET">
-    <label for="reportDetails">Ataskaitos Detalės:</label>
-    <textarea id="reportDetails" name="reportDetails">Esamos Detalės</textarea><br><br>
-    <button type="submit">Išsaugoti</button>
-</form>
-<br>
-<a href="doctor-view-procedure-reports">Atgal į Procedūrų Ataskaitas</a>
+<div class="container">
+    <h1>Redaguoti Procedūrų Ataskaitą</h1>
+
+    <h2>Paciento Informacija</h2>
+    <p>Vardas: Jonas Jonaitis</p>
+    <p>Procedūra: Širdies EKG</p>
+    <p>Data: 2024-11-01</p>
+    <p>Rezervacijos Laikas: 10:00</p>
+
+    <form action="doctor-view-procedure-reports" method="GET">
+        <label for="description">Aprašymas:</label>
+        <textarea id="description" name="description">Esamas procedūros aprašymas</textarea><br><br>
+
+        <label for="complaints">Paciento Nusiskundimai:</label>
+        <textarea id="complaints" name="complaints">Esami paciento nusiskundimai</textarea><br><br>
+
+        <label for="conclusions">Išvados:</label>
+        <textarea id="conclusions" name="conclusions">Esamos išvados</textarea><br><br>
+
+        <label for="heartRate">Širdies Ritmas:</label>
+        <input type="number" id="heartRate" name="heartRate" value="72"><br><br>
+
+        <label for="temperature">Temperatūra (°C):</label>
+        <input type="number" step="0.1" id="temperature" name="temperature" value="36.6"><br><br>
+
+        <button type="submit">Išsaugoti</button>
+    </form>
+
+    <br>
+    <a href="doctor-view-procedure-reports">Atgal į Procedūrų Ataskaitas</a>
+</div>
 </body>
 </html>

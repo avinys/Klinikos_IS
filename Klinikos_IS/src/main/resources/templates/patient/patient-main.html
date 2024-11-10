@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Paciento Pagrindinis Langas</title>
-    <link ref="stylesheet" th:href="@{/styles/global.css}">
-    <style>
-        body { font-family: Arial, sans-serif; }
-        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-        h2 { text-align: center; }
-        .nav-link { margin: 15px 0; padding: 15px; display: block; text-align: center; background-color: #f4f4f4; border: 1px solid #ccc; text-decoration: none; color: #333; }
-        .nav-link:hover { background-color: #ddd; }
-    </style>
+    <link rel="stylesheet" th:href="@{/styles/global.css}">
+<!--    <style>-->
+<!--        body { font-family: Arial, sans-serif; background-color: #f9f9f9; }-->
+<!--        .container { max-width: 600px; margin: 0 auto; padding: 20px; background-color: #fff; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }-->
+<!--        h1 { text-align: center; color: #333; }-->
+<!--        .nav-link { margin: 10px 0; padding: 12px; display: block; text-align: center; background-color: #007bff; border-radius: 4px; text-decoration: none; color: #fff; font-weight: bold; transition: background-color 0.3s; }-->
+<!--        .nav-link:hover { background-color: #0056b3; }-->
+<!--    </style>-->
 </head>
 <body>
-<h1>Paciento Pagrindinis Langas</h1>
-<a href="view-recommended-procedures" class="nav-link">Rekomenduojamos Procedūros</a>
-<a href="view-doctors" class="nav-link">Peržiūrėti Gydytojus</a>
-<a href="patient-view-procedure-reports" class="nav-link">Peržiūrėti Procedūrų Ataskaitas</a>
-<a href="view-referrals" class="nav-link">Peržiūrėti Siuntimus</a>
-<a href="logout" class="nav-link">Atsijungti</a>
+
+<div class="container">
+    <h1>Paciento Pagrindinis Langas</h1>
+    <a href="view-recommended-procedures" class="nav-link">Rekomenduojamos Procedūros</a>
+    <a href="view-doctors" class="nav-link">Peržiūrėti Gydytojus</a>
+    <a href="patient-view-procedure-reports" class="nav-link">Peržiūrėti Procedūrų Ataskaitas</a>
+    <a href="view-referrals" class="nav-link">Peržiūrėti Siuntimus</a>
+    <a href="logout" class="nav-link">Atsijungti</a>
+</div>
+
 </body>
 </html>

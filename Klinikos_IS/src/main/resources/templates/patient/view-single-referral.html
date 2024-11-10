@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="lt">
 <head>
+    <meta charset="UTF-8">
     <title>Siuntimo Informacija</title>
     <link rel="stylesheet" th:href="@{/styles/global.css}">
+<!--    <style>-->
+<!--        body { font-family: Arial, sans-serif; background-color: #f9f9f9; }-->
+<!--        .container { max-width: 600px; margin: 0 auto; padding: 20px; background-color: #fff; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }-->
+<!--        h2 { text-align: center; color: #333; }-->
+<!--        .detail { margin: 10px 0; font-size: 16px; color: #333; }-->
+<!--        .nav-link { margin-top: 20px; display: inline-block; padding: 10px 20px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 4px; font-weight: bold; transition: background-color 0.3s; }-->
+<!--        .nav-link:hover { background-color: #0056b3; }-->
+<!--    </style>-->
 </head>
 <body>
+
 <div class="container">
     <h2>Siuntimo Informacija</h2>
-    <p>Siuntimo ID: 1</p>
-    <p>Siuntimo Data: 2023-04-20</p>
-    <p>Gydytojas: Petras</p>
-    <p>Procedūra: Kraujo Tyrimas</p>
+    <p class="detail"><strong>Siuntimo ID:</strong> 1</p>
+    <p class="detail"><strong>Data:</strong> 2023-04-20</p>
+    <p class="detail"><strong>Laikas:</strong> 14:00</p>
+    <p class="detail"><strong>Gydytojo Pastabos:</strong> Kardiologinė konsultacija reikalinga dėl širdies problemų</p>
+    <p class="detail"><strong>Galiojimo Dienos:</strong> 30</p>
+    <p class="detail"><strong>Gydytojas:</strong> Petras Petraitis</p>
+    <p class="detail"><strong>Procedūra:</strong> Kraujo Tyrimas</p>
+
     <a href="view-referrals" class="nav-link">Grįžti į Siuntimus</a>
 </div>
+
 </body>
 </html>

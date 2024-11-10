@@ -1,17 +1,44 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="lt">
 <head>
+    <meta charset="UTF-8">
     <title>Rekomenduojamos Procedūros</title>
     <link rel="stylesheet" th:href="@{/styles/global.css}">
 </head>
 <body>
 <div class="container">
     <h2>Rekomenduojamos Procedūros</h2>
+
+    <!-- Symptoms Input Form -->
     <form action="view-recommended-procedures" method="POST">
         <label for="symptoms">Negalavimai:</label>
-        <textarea id="symptoms" name="symptoms" rows="4" placeholder="Įveskite savo nepatogumus"></textarea>
-        <button type="submit">Pateikti</button>
+        <textarea id="symptoms" name="symptoms" rows="4" placeholder="Įveskite savo negalavimus"></textarea>
+        <button type="submit">Generuoti Rekomendacijas</button>
     </form>
+
+    <!-- Recommended Procedures List -->
+    <div class="recommendations">
+        <h3>Siūlomos Procedūros</h3>
+        <ul>
+            <li>
+                <strong>Kraujo Tyrimas</strong>
+                <p>Aprašymas: Rekomenduojama atlikti kraujo tyrimą, siekiant patikrinti bendrą sveikatos būklę.</p>
+                <p>Maksimali Trukmė: 30 min</p>
+            </li>
+            <li>
+                <strong>Širdies Tyrimas</strong>
+                <p>Aprašymas: Rekomenduojama atlikti širdies tyrimą, siekiant išsiaiškinti galimas širdies problemas.</p>
+                <p>Maksimali Trukmė: 45 min</p>
+            </li>
+            <li>
+                <strong>Plaučių Rentgenas</strong>
+                <p>Aprašymas: Patikrinimas siekiant aptikti galimus plaučių sutrikimus.</p>
+                <p>Maksimali Trukmė: 20 min</p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Navigation Link -->
     <a href="patient-home" class="nav-link">Grįžti į Pagrindinį</a>
 </div>
 </body>

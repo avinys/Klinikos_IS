@@ -1,16 +1,43 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="lt">
 <head>
+    <meta charset="UTF-8">
     <title>Peržiūrėti Siuntimus</title>
     <link rel="stylesheet" th:href="@{/styles/global.css}">
 </head>
 <body>
 <div class="container">
     <h2>Siuntimai</h2>
-    <ul>
-        <li><a href="view-single-referral">Siuntimas #1</a></li>
-        <li><a href="view-single-referral">Siuntimas #2</a></li>
-    </ul>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Siuntimo ID</th>
+            <th>Data</th>
+            <th>Laikas</th>
+            <th>Gydytojo Pastabos</th>
+            <th>Galiojimo Dienos</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><a href="view-single-referral">#1</a></td>
+            <td>2023-10-15</td>
+            <td>14:00</td>
+            <td>Kardiologinė konsultacija reikalinga dėl širdies problemų</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td><a href="view-single-referral">#2</a></td>
+            <td>2023-11-01</td>
+            <td>09:30</td>
+            <td>Gydytojo stebėjimo siuntimas po operacijos</td>
+            <td>15</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <br>
     <a href="patient-home" class="nav-link">Grįžti į Pagrindinį</a>
 </div>
 </body>

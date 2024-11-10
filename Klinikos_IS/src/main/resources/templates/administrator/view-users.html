@@ -2,30 +2,54 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Vartotojų Peržiūra</title>
-    <link ref="stylesheet" th:href="@{/styles/global.css}">
+    <link rel="stylesheet" th:href="@{/styles/global.css}">
 </head>
 <body>
 <h1>Vartotojų Peržiūra</h1>
 <table>
     <thead>
     <tr>
-        <th>Vardas</th>
-        <th>Pavardė</th>
+        <th>Prisijungimo Vardas</th>
+        <th>Slaptažodis</th>
+        <th>Elektroninis Paštas</th>
+        <th>Telefono Numeris</th>
+        <th>Sukūrimo Data</th>
+        <th>Rolė</th>
         <th>Veiksmai</th>
     </tr>
     </thead>
     <tbody>
     <tr>
-        <td>Jonas</td>
-        <td>Jonaitis</td>
+        <td>jonas123</td>
+        <td>******</td>
+        <td>jonas@pavyzdys.lt</td>
+        <td>+37061234567</td>
+        <td>2023-01-10</td>
+        <td>Pacientas</td>
         <td>
             <a href="edit-patient">Redaguoti</a>
             <a href="confirm-delete-user">Ištrinti</a>
         </td>
     </tr>
     <tr>
-        <td>Petras</td>
-        <td>Petraitis</td>
+        <td>petras456</td>
+        <td>******</td>
+        <td>petras@pavyzdys.lt</td>
+        <td>+37069876543</td>
+        <td>2023-02-15</td>
+        <td>Gydytojas</td>
+        <td>
+            <a href="edit-doctor">Redaguoti</a>
+            <a href="confirm-delete-user">Ištrinti</a>
+        </td>
+    </tr>
+    <tr>
+        <td>ausra789</td>
+        <td>******</td>
+        <td>ausra@pavyzdys.lt</td>
+        <td>+37067788990</td>
+        <td>2023-03-20</td>
+        <td>Pacientas</td>
         <td>
             <a href="edit-patient">Redaguoti</a>
             <a href="confirm-delete-user">Ištrinti</a>
@@ -34,7 +58,10 @@
     </tbody>
 </table>
 <br>
-<a href="create-patient">Sukurti Naują Pacientą</a>
-<a href="admin-home">Atgal į pagrindinį</a>
+<div class="container" style="display:flex; justify-content: space-between">
+    <a href="create-patient">Sukurti Naują Pacientą</a>
+    <a href="create-doctor">Sukurti Naują Gydytoją</a>
+    <a href="admin-home">Atgal į pagrindinį</a>
+</div>
 </body>
 </html>

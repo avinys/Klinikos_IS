@@ -1,16 +1,48 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="lt">
 <head>
+    <meta charset="UTF-8">
     <title>Peržiūrėti Procedūrų Ataskaitas</title>
     <link rel="stylesheet" th:href="@{/styles/global.css}">
 </head>
 <body>
 <div class="container">
     <h2>Procedūrų Ataskaitos</h2>
-    <ul>
-        <li><a href="view-single-procedure-report">Procedūra #1</a></li>
-        <li><a href="view-single-procedure-report">Procedūra #2</a></li>
-    </ul>
+    <table>
+        <thead>
+        <tr>
+            <th>Procedūros ID</th>
+            <th>Procedūros Pavadinimas</th>
+            <th>Data</th>
+            <th>Gydytojas</th>
+            <th>Peržiūra</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>Širdies EKG</td>
+            <td>2023-05-01</td>
+            <td>Dr. Jonas Jonaitis</td>
+            <td><a href="view-single-procedure-report?reportId=1">Peržiūrėti</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Kraujo tyrimas</td>
+            <td>2023-06-15</td>
+            <td>Dr. Petras Petraitis</td>
+            <td><a href="view-single-procedure-report?reportId=2">Peržiūrėti</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Rentgenas</td>
+            <td>2023-07-10</td>
+            <td>Dr. Ona Onaitytė</td>
+            <td><a href="view-single-procedure-report?reportId=3">Peržiūrėti</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
     <a href="patient-home" class="nav-link">Grįžti į Pagrindinį</a>
 </div>
 </body>

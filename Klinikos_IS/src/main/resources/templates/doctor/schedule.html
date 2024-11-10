@@ -3,12 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <title>Tvarkaraštis</title>
-    <link ref="stylesheet" th:href="@{/styles/global.css}">
+    <link rel="stylesheet" th:href="@{/styles/global.css}">
+    <style>
+        .schedule-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .filter {
+            margin-bottom: 20px;
+        }
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .schedule-table th, .schedule-table td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        .time-slot {
+            font-weight: bold;
+            color: #2a9d8f;
+        }
+        .appointment {
+            color: #264653;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-<h1>Tvarkaraštis</h1>
-<p>Čia bus tvarkaraščio peržiūra.</p>
-<br>
-<a href="doctor-home">Atgal į Gydytojo Pagrindinį Langą</a>
+<div class="schedule-container">
+    <h1>Tvarkaraštis</h1>
+    <div class="filter">
+        <label for="day-select">Pasirinkite dieną:</label>
+        <select id="day-select">
+            <option value="all">Visos dienos</option>
+            <option value="monday">Pirmadienis</option>
+            <option value="tuesday">Antradienis</option>
+            <option value="wednesday">Trečiadienis</option>
+            <option value="thursday">Ketvirtadienis</option>
+            <option value="friday">Penktadienis</option>
+        </select>
+    </div>
+
+    <table class="schedule-table">
+        <thead>
+        <tr>
+            <th>Laikas</th>
+            <th>Pirmadienis</th>
+            <th>Antradienis</th>
+            <th>Trečiadienis</th>
+            <th>Ketvirtadienis</th>
+            <th>Penktadienis</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="time-slot">08:00 - 09:00</td>
+            <td><span class="appointment">Pacientas: Jonas Jonaitis</span></td>
+            <td></td>
+            <td><span class="appointment">Pacientas: Ona Onaitytė</span></td>
+            <td></td>
+            <td><span class="appointment">Pacientas: Petras Petraitis</span></td>
+        </tr>
+        <tr>
+            <td class="time-slot">09:00 - 10:00</td>
+            <td></td>
+            <td><span class="appointment">Pacientas: Milda Mildaitytė</span></td>
+            <td></td>
+            <td><span class="appointment">Pacientas: Jonas Jonaitis</span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="time-slot">10:00 - 11:00</td>
+            <td><span class="appointment">Pacientas: Antanas Antanaitis</span></td>
+            <td></td>
+            <td></td>
+            <td><span class="appointment">Pacientas: Ona Onaitytė</span></td>
+            <td></td>
+        </tr>
+        <!-- Add more time slots as needed -->
+        </tbody>
+    </table>
+    <br>
+    <a href="doctor-home" class="nav-link">Atgal į Gydytojo Pagrindinį Langą</a>
+</div>
+
+<script>
+    document.getElementById('day-select').addEventListener('change', function() {
+        const day = this.value;
+        const columns = document.querySelectorAll('.schedule-table tbody td');
+
+        columns.forEach((col, index) => {
+            const dayIndex = index % 5;
+            if (day === 'all' || dayIndex === getDayIndex(day)) {
+                col.style.display = '';
+            } else {
+                col.style.display = 'none';
+            }
+        });
+    });
+
+    function getDayIndex(day) {
+        const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'];
+        return days.indexOf(day);
+    }
+</script>
 </body>
 </html>

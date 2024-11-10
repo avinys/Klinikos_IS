@@ -1,17 +1,62 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="lt">
 <head>
+    <meta charset="UTF-8">
     <title>Peržiūrėti Gydytojus</title>
     <link rel="stylesheet" th:href="@{/styles/global.css}">
 </head>
 <body>
 <div class="container">
     <h2>Gydytojų Sąrašas</h2>
-    <ul>
-        <li><a href="view-single-doctor">Gydytojas Jonas</a></li>
-        <li><a href="view-single-doctor">Gydytojas Petras</a></li>
-        <li><a href="view-single-doctor">Gydytojas Ona</a></li>
-    </ul>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Gydytojo Vardas</th>
+            <th>Specializacija</th>
+            <th>Kvalifikacijos</th>
+            <th>Kalbos</th>
+            <th>Peržiūra</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Jonas Jonaitis</td>
+            <td>Kardiologija</td>
+            <td>
+                <ul>
+                    <li>Kardiologijos Magistras, Vilniaus Universitetas (2005), 15 metų patirtis</li>
+                </ul>
+            </td>
+            <td>Anglų, Lietuvių</td>
+            <td><a href="view-single-doctor?doctorId=1">Peržiūrėti</a></td>
+        </tr>
+        <tr>
+            <td>Petras Petraitis</td>
+            <td>Chirurgija</td>
+            <td>
+                <ul>
+                    <li>Chirurgijos Bakalauras, Kauno Universitetas (2008), 12 metų patirtis</li>
+                </ul>
+            </td>
+            <td>Lietuvių, Rusų</td>
+            <td><a href="view-single-doctor?doctorId=2">Peržiūrėti</a></td>
+        </tr>
+        <tr>
+            <td>Ona Onaitytė</td>
+            <td>Neurologija</td>
+            <td>
+                <ul>
+                    <li>Neurologijos Magistras, Klaipėdos Universitetas (2010), 10 metų patirtis</li>
+                </ul>
+            </td>
+            <td>Anglų, Vokiečių</td>
+            <td><a href="view-single-doctor?doctorId=3">Peržiūrėti</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <br>
     <a href="patient-home" class="nav-link">Grįžti į Pagrindinį</a>
 </div>
 </body>

@@ -1,20 +1,77 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Sukurti Pacientą</title>
-    <link ref="stylesheet" th:href="@{/styles/global.css}">
+    <title>Redaguoti Pacientą</title>
+    <link rel="stylesheet" th:href="@{/styles/global.css}">
 </head>
 <body>
-<h1>Sukurti Pacientą</h1>
+<h1>Redaguoti Pacientą</h1>
+
 <form action="view-users" method="GET">
-    <label for="patientName">Vardas:</label>
-    <input type="text" id="patientName" name="patientName"><br><br>
+    <!-- Naudotojas fields -->
+    <h2>Naudotojas Informacija</h2>
+    <label for="username">Prisijungimo vardas:</label>
+    <input type="text" id="username" name="username" value="jonas123"><br><br>
 
-    <label for="patientSurname">Pavardė:</label>
-    <input type="text" id="patientSurname" name="patientSurname"><br><br>
+    <label for="password">Slaptažodis:</label>
+    <input type="password" id="password" name="password" value="******"><br><br>
 
-    <button type="submit">Sukurti Pacientą</button>
+    <label for="email">Elektroninis paštas:</label>
+    <input type="email" id="email" name="email" value="jonas@example.com"><br><br>
+
+    <label for="phone">Telefono numeris:</label>
+    <input type="tel" id="phone" name="phone" value="+37061234567"><br><br>
+
+    <label for="creationDate">Sukūrimo data:</label>
+    <input type="date" id="creationDate" name="creationDate" value="2023-02-15"><br><br>
+
+    <!-- Pacientas fields -->
+    <h2>Pacientas Informacija</h2>
+    <label for="firstName">Vardas:</label>
+    <input type="text" id="firstName" name="firstName" value="Jonas"><br><br>
+
+    <label for="lastName">Pavardė:</label>
+    <input type="text" id="lastName" name="lastName" value="Jonaitis"><br><br>
+
+    <label for="idCode">Asmens kodas:</label>
+    <input type="text" id="idCode" name="idCode" value="39012345678"><br><br>
+
+    <label for="gender">Lytis:</label>
+    <select id="gender" name="gender">
+        <option value="male" selected>Vyras</option>
+        <option value="female">Moteris</option>
+    </select><br><br>
+
+    <label for="birthDate">Gimimo data:</label>
+    <input type="date" id="birthDate" name="birthDate" value="1990-01-01"><br><br>
+
+    <label for="address">Adresas:</label>
+    <input type="text" id="address" name="address" value="Kauno g. 15, Vilnius"><br><br>
+
+    <label for="bloodType">Kraujo grupė:</label>
+    <input type="text" id="bloodType" name="bloodType" value="A+"><br><br>
+
+    <label for="height">Ūgis (cm):</label>
+    <input type="number" id="height" name="height" value="180"><br><br>
+
+    <label for="weight">Svoris (kg):</label>
+    <input type="number" id="weight" name="weight" value="75"><br><br>
+
+    <label for="smoking">Rūkantis:</label>
+    <input type="checkbox" id="smoking" name="smoking" checked><br><br>
+
+    <label for="insured">Apdraustas:</label>
+    <input type="checkbox" id="insured" name="insured" checked><br><br>
+
+    <label for="alcohol">Vartojantis alkoholį:</label>
+    <input type="checkbox" id="alcohol" name="alcohol"><br><br>
+
+    <label for="vegetarian">Vegetaras:</label>
+    <input type="checkbox" id="vegetarian" name="vegetarian"><br><br>
+
+    <button type="submit">Atnaujinti Pacientą</button>
 </form>
+
 <br>
 <a href="view-users">Atgal į Vartotojų Peržiūrą</a>
 </body>
