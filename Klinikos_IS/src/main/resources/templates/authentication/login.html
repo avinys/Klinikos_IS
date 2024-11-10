@@ -1,23 +1,15 @@
 <!DOCTYPE html>
-<html lang="lt">
+<html xmlns:th="http://www.thymeleaf.org" lang="lt">
 <head>
     <meta charset="UTF-8">
     <title>Prisijungimo langas</title>
-    <style>
-        body { font-family: Arial, sans-serif; }
-        .container { max-width: 400px; margin: 0 auto; padding: 20px; text-align: center; }
-        .input-group { margin-bottom: 15px; }
-        label { display: block; margin-bottom: 5px; }
-        input { width: 100%; padding: 10px; }
-        button { width: 100%; padding: 10px; }
-        a { display: block; margin-top: 10px; text-decoration: none; color: blue; }
-    </style>
+    <link ref="stylesheet" th:href="@{/styles/global.css}">
 </head>
 <body>
 
 <div class="container">
     <h2>Prisijungimas</h2>
-    <form action="admin-home" method="GET">
+    <form action="main" method="GET">
         <div class="input-group">
             <label for="username">Vartotojo vardas</label>
             <input type="text" id="username" name="username">

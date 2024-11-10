@@ -2,10 +2,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Gydytojo Sukūrimo Langas</title>
+    <link ref="stylesheet" th:href="@{/styles/global.css}">
 </head>
 <body>
 <h1>Gydytojo Sukūrimo Langas</h1>
-<form action="#" method="post">
+<form action="admin-home" method="GET">
     <label for="doctorName">Vardas:</label>
     <input type="text" id="doctorName" name="doctorName"><br><br>
 

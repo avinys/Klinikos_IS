@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="lt">
+<head>
+    <title>Rekomenduojamos Procedūros</title>
+    <link rel="stylesheet" th:href="@{/styles/global.css}">
+</head>
+<body>
+<div class="container">
+    <h2>Rekomenduojamos Procedūros</h2>
+    <form action="view-recommended-procedures" method="POST">
+        <label for="symptoms">Negalavimai:</label>
+        <textarea id="symptoms" name="symptoms" rows="4" placeholder="Įveskite savo nepatogumus"></textarea>
+        <button type="submit">Pateikti</button>
+    </form>
+    <a href="patient-home" class="nav-link">Grįžti į Pagrindinį</a>
+</div>
+</body>
+</html>

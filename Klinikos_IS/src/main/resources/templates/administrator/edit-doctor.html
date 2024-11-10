@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Redaguoti Gydytoją</title>
+    <link ref="stylesheet" th:href="@{/styles/global.css}">
+</head>
+<body>
+<h1>Redaguoti Gydytoją</h1>
+<form action="view-users" method="GET">
+    <label for="doctorName">Vardas:</label>
+    <input type="text" id="doctorName" name="doctorName" value="Petras"><br><br>
+
+    <label for="doctorSpecialty">Specializacija:</label>
+    <input type="text" id="doctorSpecialty" name="doctorSpecialty" value="Kardiologas"><br><br>
+
+    <button type="submit">Atnaujinti Gydytoją</button>
+</form>
+<br>
+<a href="view-users">Atgal į Vartotojų Peržiūrą</a>
+</body>
+</html>

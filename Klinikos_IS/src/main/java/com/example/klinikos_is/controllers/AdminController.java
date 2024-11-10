@@ -5,19 +5,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class AdminController {
-    @GetMapping("/")
-    public String homePage() {
-        // renamed method to avoid conflict
-        return "redirect:/admin-home";
-}
-
-    @GetMapping("/create-doctor")
-    public String doctorCreationPage() {
-        return "administrator/create-doctor";
+    @GetMapping("/admin-home")
+    public String adminHomePage() { // renamed method to avoid conflict
+        return "administrator/admin-main";
     }
 
+
     @GetMapping("/view-procedures")
-    public String procedureOverviewPage() {
+    public String viewProceduresPage() {
         return "administrator/view-procedures";
     }
 
@@ -27,7 +22,7 @@ public class AdminController {
     }
 
     @GetMapping("/edit-procedure")
-    public String procedureEditingPage() {
+    public String procedureEditPage() {
         return "administrator/edit-procedure";
     }
 
@@ -36,8 +31,31 @@ public class AdminController {
         return "administrator/confirm-delete-procedure";
     }
 
-    @GetMapping("/admin-home")
-    public String adminHomePage() { // renamed method to avoid conflict
-        return "administrator/main";
+    @GetMapping("/view-users")
+    public String viewUsersPage() {
+        return "administrator/view-users";
+    }
+
+    @GetMapping("/create-patient")
+    public String createPatientPage() {
+        return "administrator/create-patient";
+    }
+
+    @GetMapping("/edit-patient")
+    public String editPatientPage() {
+        return "administrator/edit-patient";
+    }
+
+    @GetMapping("/confirm-delete-user")
+    public String confirmDeleteUserPage() {
+        return "administrator/confirm-delete-user";
+    }
+
+    @GetMapping("/create-doctor")
+    public String doctorCreationPage() { return "administrator/create-doctor";}
+
+    @GetMapping("/edit-doctor")
+    public String editDoctorPage() {
+        return "administrator/edit-doctor";
     }
 }

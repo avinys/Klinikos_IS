@@ -2,10 +2,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Procedūros Redagavimo Langas</title>
+    <link ref="stylesheet" th:href="@{/styles/global.css}">
 </head>
 <body>
 <h1>Procedūros Redagavimo Langas</h1>
-<form action="#" method="post">
+<form action="view-procedures" method="GET">
     <label for="procedureId">Procedūros ID:</label>
     <input type="text" id="procedureId" name="procedureId"><br><br>
 

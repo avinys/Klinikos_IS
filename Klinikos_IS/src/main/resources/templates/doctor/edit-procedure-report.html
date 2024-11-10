@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <title>Redaguoti Procedūrų Ataskaitą</title>
+    <link ref="stylesheet" th:href="@{/styles/global.css}">
+</head>
+<body>
+<h1>Redaguoti Procedūrų Ataskaitą</h1>
+<form action="doctor-view-procedure-reports" method="GET">
+    <label for="reportDetails">Ataskaitos Detalės:</label>
+    <textarea id="reportDetails" name="reportDetails">Esamos Detalės</textarea><br><br>
+    <button type="submit">Išsaugoti</button>
+</form>
+<br>
+<a href="doctor-view-procedure-reports">Atgal į Procedūrų Ataskaitas</a>
+</body>
+</html>

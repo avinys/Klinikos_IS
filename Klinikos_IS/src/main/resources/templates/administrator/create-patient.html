@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sukurti Pacientą</title>
+    <link ref="stylesheet" th:href="@{/styles/global.css}">
+</head>
+<body>
+<h1>Sukurti Pacientą</h1>
+<form action="view-users" method="GET">
+    <label for="patientName">Vardas:</label>
+    <input type="text" id="patientName" name="patientName"><br><br>
+
+    <label for="patientSurname">Pavardė:</label>
+    <input type="text" id="patientSurname" name="patientSurname"><br><br>
+
+    <button type="submit">Sukurti Pacientą</button>
+</form>
+<br>
+<a href="view-users">Atgal į Vartotojų Peržiūrą</a>
+</body>
+</html>

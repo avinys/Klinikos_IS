@@ -9,7 +9,7 @@ public class AuthController {
     public String loginPage() { return "authentication/login";}
 
     @GetMapping("/logout")
-    public String logoutPage() { return "redirect:/login";}
+    public String logoutPage() { return "authentication/login";}
 
     @GetMapping("/recover-password")
     public String recoverPasswordPage() {
