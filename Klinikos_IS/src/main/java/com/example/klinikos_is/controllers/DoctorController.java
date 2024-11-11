@@ -40,4 +40,10 @@ public class DoctorController {
     public String viewSinglePatientPage() {
         return "doctor/view-single-patient";
     }
+
+    @GetMapping("/view-single-reservation")
+    public String viewSingleReservationPage() { return "doctor/view-single-reservation"; }
+
+    @GetMapping("/create-procedure-report")
+    public String creatProcedureReportPage() { return "doctor/create-procedure-report"; }
 }
