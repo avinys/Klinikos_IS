@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <title>Peržiūrėti Rezervacijas</title>
+    <link rel="stylesheet" th:href="@{/styles/global.css}">
+</head>
+<body>
+<div class="container">
+    <h2>Rezervacijos</h2>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Data</th>
+            <th>Laikas</th>
+            <th>Trukmė</th>
+            <th>Pastabos</th>
+            <th>Gydytojas</th>
+            <th>Procedūra</th>
+            <th>Veiksmai</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>2023-10-10</td>
+            <td>14:00</td>
+            <td>30 min</td>
+            <td>Konsultacija dėl sveikatos būklės</td>
+            <td>Dr. Jonas Jonaitis</td>
+            <td>Kraujo Tyrimas</td>
+            <td>
+                <a href="edit-reservation?reservationId=1">Redaguoti</a> |
+                <a href="confirm-delete-reservation?reservationId=1">Ištrinti</a>
+            </td>
+        </tr>
+        <tr>
+            <td>2023-11-12</td>
+            <td>09:30</td>
+            <td>45 min</td>
+            <td>Reikalingas tolesnis tyrimas</td>
+            <td>Dr. Ona Onaitytė</td>
+            <td>Širdies Tyrimas</td>
+            <td>
+                <a href="edit-reservation?reservationId=2">Redaguoti</a> |
+                <a href="confirm-delete-reservation?reservationId=2">Ištrinti</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <a href="patient-home" class="nav-link">Grįžti į Pagrindinį</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <title>Patvirtinti Rezervacijos Ištrynimą</title>
+    <link rel="stylesheet" th:href="@{/styles/global.css}">
+</head>
+<body>
+<div class="container">
+    <h2>Ar tikrai norite ištrinti šią rezervaciją?</h2>
+
+    <p><strong>Data:</strong> 2023-10-10</p>
+    <p><strong>Laikas:</strong> 14:00</p>
+    <p><strong>Trukmė:</strong> 30 min</p>
+    <p><strong>Pastabos:</strong> Konsultacija dėl sveikatos būklės</p>
+    <p><strong>Gydytojas:</strong> Dr. Jonas Jonaitis</p>
+    <p><strong>Procedūra:</strong> Kraujo Tyrimas</p>
+
+    <form action="view-reservations" method="GET">
+        <button type="submit">Patvirtinti</button>
+        <a href="view-reservations" class="nav-link">Atšaukti</a>
+    </form>
+</div>
+</body>
+</html>

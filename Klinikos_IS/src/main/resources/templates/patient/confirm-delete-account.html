@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <title>Patvirtinti Paskyros Ištrynimą</title>
+    <link rel="stylesheet" th:href="@{/styles/global.css}">
+</head>
+<body>
+<div class="container">
+    <h2>Ar tikrai norite ištrinti savo paskyrą?</h2>
+    <p>Šis veiksmas yra negrįžtamas ir visi jūsų duomenys bus ištrinti.</p>
+
+    <form action="/" method="GET">
+        <button type="submit">Patvirtinti Ištrinimą</button>
+        <a href="patient-home" class="nav-link">Atšaukti</a>
+    </form>
+</div>
+</body>
+</html>

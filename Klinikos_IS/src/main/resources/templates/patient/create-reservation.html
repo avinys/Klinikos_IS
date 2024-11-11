@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <title>Sukurti Rezervaciją</title>
+    <link rel="stylesheet" th:href="@{/styles/global.css}">
+</head>
+<body>
+<div class="container">
+    <h2>Sukurti Rezervaciją</h2>
+
+    <form action="view-reservations" method="GET">
+        <label for="date"><strong>Data:</strong></label>
+        <input type="date" id="date" name="date"><br><br>
+
+        <label for="time"><strong>Laikas:</strong></label>
+        <input type="number" id="time" name="time" placeholder="14"><br><br>
+
+        <label for="duration"><strong>Trukmė (min):</strong></label>
+        <input type="number" id="duration" name="duration"><br><br>
+
+        <label for="notes"><strong>Pastabos:</strong></label>
+        <textarea id="notes" name="notes" rows="4"></textarea><br><br>
+
+        <label for="doctor"><strong>Gydytojas:</strong></label>
+        <input type="text" id="doctor" name="doctor" placeholder="Dr. Jonas Jonaitis"><br><br>
+
+        <label for="procedure"><strong>Procedūra:</strong></label>
+        <input type="text" id="procedure" name="procedure" placeholder="Kraujo Tyrimas"><br><br>
+
+        <button type="submit">Sukurti Rezervaciją</button>
+        <a href="view-reservations" class="nav-link">Grįžti į Rezervacijas</a>
+    </form>
+</div>
+</body>
+</html>

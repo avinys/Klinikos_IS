@@ -45,4 +45,27 @@ public class PatientController {
     public String viewSingleReferralPage() {
         return "patient/view-single-referral";
     }
+
+    @GetMapping("/view-reservations")
+    public String viewReservationsPage() {
+        return "patient/view-reservations";
+    }
+
+    @GetMapping("/edit-reservation")
+    public String editReservationPage() {
+        return "patient/edit-reservation";
+    }
+
+    @GetMapping("/create-reservation")
+    public String createReservationPage() {
+        return "patient/create-reservation";
+    }
+
+    @GetMapping("/confirm-delete-reservation")
+    public String confirmDeleteReservationPage() {
+        return "patient/confirm-delete-reservation";
+    }
+
+     @GetMapping("/confirm-delete-account")
+    public String confirmDeleteAccountPage() { return "patient/confirm-delete-account"; }
 }
