@@ -11,36 +11,18 @@
 
 <table>
     <thead>
-    <tr>
-        <th>Procedūros Pavadinimas</th>
-        <th>Aprašymas</th>
-        <th>Maksimali Trukmė (minutėmis)</th>
-        <th>Veiksmai</th>
-    </tr>
+        <tr>
+            <th>Procedūros Pavadinimas</th>
+            <th>Aprašymas</th>
+            <th>Maksimali Trukmė (minutėmis)</th>
+            <th>Veiksmai</th>
+        </tr> 
     </thead>
     <tbody>
-    <tr>
-        <td>Kardiologinis Tyrimas</td>
-        <td>Širdies sveikatos patikra ir EKG tyrimas.</td>
-        <td>45</td>
-        <td>
-            <a th:href="@{/edit-procedure}">Redaguoti</a>
-            <a th:href="@{/confirm-delete-procedure}">Ištrinti</a>
-        </td>
-    </tr>
-    <tr>
-        <td>Chirurginis Konsultavimas</td>
-        <td>Paciento paruošimas operacijai ir konsultacija dėl chirurginio gydymo.</td>
-        <td>30</td>
-        <td>
-            <a th:href="@{/edit-procedure}">Redaguoti</a>
-            <a th:href="@{/confirm-delete-procedure}">Ištrinti</a>
-        </td>
-    </tr>
-    <tr>
-        <td>Laboratorinis Kraujo Tyrimas</td>
-        <td>Bendro kraujo tyrimo atlikimas ir analizė.</td>
-        <td>15</td>
+    <tr th:each="procedure : ${procedures}">
+        <td th:text="${procedure.name}"></td>
+        <td th:text="${procedure.description}"></td>
+        <td th:text="${procedure.maxDuration}"></td>
         <td>
             <a th:href="@{/edit-procedure}">Redaguoti</a>
             <a th:href="@{/confirm-delete-procedure}">Ištrinti</a>
